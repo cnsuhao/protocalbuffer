@@ -1,0 +1,319 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_SPLITTER_RESOURCES\r\n"
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "#ifdef _WIN32\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#pragma code_page(936)\r\n"
+    "#endif //_WIN32\r\n"
+    "#include ""res\\HKDlg.rc2""  // non-Microsoft Visual C++ edited resources\r\n"
+    "#include ""l.chs\\afxres.rc""          // Standard components\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\HKDlg.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOG 0, 0, 235, 55
+STYLE DS_SETFONT | DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 HKDlg"
+FONT 9, "宋体"
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,11,17,20,20
+    LTEXT           "HKDlg 1.0 版",IDC_STATIC,40,10,119,8,SS_NOPREFIX
+    LTEXT           "版权所有 (C) 2015",IDC_STATIC,40,25,119,8
+    DEFPUSHBUTTON   "确定",IDOK,178,7,50,14,WS_GROUP
+END
+
+IDD_HKDLG_DIALOG DIALOGEX 0, 0, 639, 412
+STYLE DS_SETFONT | DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_VISIBLE | WS_CAPTION | WS_SYSMENU
+EXSTYLE WS_EX_APPWINDOW
+CAPTION "车辆违章行为检测抓拍系统"
+FONT 9, "宋体", 0, 0, 0x1
+BEGIN
+    PUSHBUTTON      "连接摄像头",IDC_BUTTON_PLAY,525,59,50,14
+    PUSHBUTTON      "区域设置",IDC_BUTTON_SetROI,405,271,50,14
+    PUSHBUTTON      "确定",IDC_BUTTON_CONFIRMROI,456,271,50,14
+    PUSHBUTTON      "违停抓拍",IDC_BUTTON_RMNIGHT,582,95,50,14
+    PUSHBUTTON      "停止",IDC_BUTTON_STOP,415,391,50,14,NOT WS_VISIBLE
+    PUSHBUTTON      "上",IDC_BUTTON_CameraUp,541,99,13,14
+    PUSHBUTTON      "...",IDC_BTN_BROWSER,205,270,31,16
+    EDITTEXT        IDC_EDIT_HEIGHT,605,41,26,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_EDIT_WIDTH,564,41,27,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_IPADDRESS1,"SysIPAddress32",WS_TABSTOP,562,19,69,15
+    CONTROL         "",IDC_STATIC_PLAY,"Static",SS_BLACKFRAME,7,7,509,262
+    PUSHBUTTON      "打开文件...",IDC_BUTTON_OPEN,308,395,50,14,NOT WS_VISIBLE
+    PUSHBUTTON      "逆行抓拍",IDC_BUTTON_OUT,451,391,50,14,NOT WS_VISIBLE
+    LTEXT           "摄像头IP:",IDC_STATIC_IP,524,23,38,11
+    LTEXT           "分辨率 宽:",IDC_STATIC_WIDTH,524,44,40,8
+    LTEXT           "高:",IDC_STATIC_CHANG,594,44,10,8
+    PUSHBUTTON      "下",IDC_BUTTON_CameraDown,541,138,13,14
+    PUSHBUTTON      "左",IDC_BUTTON3IDC_BUTTON_CameraLeft,524,119,13,14
+    PUSHBUTTON      "右",IDC_BUTTON_CameraRight,559,119,13,14
+    CTEXT           "变倍",IDC_STATIC_ZOOM,541,162,17,8
+    PUSHBUTTON      "伸",IDC_BUTTON_ZoomIn,524,159,13,14
+    PUSHBUTTON      "缩",IDC_BUTTON_ZoomOut,559,159,13,14
+    PUSHBUTTON      "抓拍图像",IDC_BUTTON_Capture,246,271,50,14
+    LTEXT           "存储路径",IDC_STATIC_PicAddr,8,273,33,8
+    EDITTEXT        IDC_EDIT_PicAddr,44,271,161,14,ES_AUTOHSCROLL
+    CONTROL         "",IDC_LIST_Result,"SysListView32",LVS_REPORT | LVS_ALIGNLEFT | WS_BORDER | WS_TABSTOP,7,286,625,106
+    EDITTEXT        IDC_FileName,48,396,164,13,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    LTEXT           "当前文件：",IDC_STATIC,7,398,41,8,NOT WS_VISIBLE
+    LTEXT           "当前帧数：",IDC_STATIC,219,397,40,8,NOT WS_VISIBLE
+    EDITTEXT        IDC_FrameNum,259,395,25,12,ES_AUTOHSCROLL | NOT WS_VISIBLE
+    COMBOBOX        IDC_COMBO_PTZ_SPEED,585,156,43,64,CBS_DROPDOWN | CBS_SORT | WS_VSCROLL | WS_TABSTOP
+    GROUPBOX        "巡航路径",IDC_STATIC,582,185,49,97
+    COMBOBOX        IDC_COMBO_SEQ,584,197,41,51,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "调用",IDC_BUTTON_SEQ_GOTO,584,218,42,14
+    PUSHBUTTON      "设置",IDC_BUTTON_SEQ_SET,584,241,43,14
+    GROUPBOX        "云台速度",IDC_STATIC,582,140,48,37
+    GROUPBOX        "预置位",IDC_STATIC,522,185,56,99
+    COMBOBOX        IDC_COMBO_PRESET,525,197,48,56,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "调用",IDC_BUTTON_PRESET_GOTO,525,218,50,14
+    PUSHBUTTON      "设置",IDC_BUTTON_PRESET_SET,525,241,50,14
+    PUSHBUTTON      "删除",IDC_BUTTON_PRESET_DEL,525,264,50,14
+    PUSHBUTTON      "停止",IDC_BUTTON_TRACK_STOP,584,264,44,14
+    PUSHBUTTON      "打开图片",IDC_BtnFindVehicle,362,395,50,14,NOT WS_VISIBLE
+    PUSHBUTTON      "循环调用",IDC_BUTTON_SEQ_GOTOR,585,263,6,14,NOT WS_VISIBLE | WS_DISABLED
+    LTEXT           "北京时代云英 2016",IDC_STATIC,526,398,85,8
+    GROUPBOX        "运行模式",IDC_STATIC,580,84,53,29
+    GROUPBOX        "球机控制",IDC_STATIC,520,85,57,95
+    GROUPBOX        "球机配置",IDC_STATIC,520,7,114,73
+END
+
+IDD_DLG_PTZ_CRUISE DIALOGEX 0, 0, 310, 177
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "巡航路径"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    LTEXT           "巡航路径",IDC_STATIC,36,20,42,10
+    COMBOBOX        IDC_COMBO_CRUISE_ROUTE,131,21,83,94,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "巡航点",IDC_STATIC,38,50,25,8
+    LTEXT           "预置点",IDC_STATIC,37,78,26,8
+    LTEXT           "时间(秒)",IDC_STATIC,37,106,32,8
+    LTEXT           "速度",IDC_STATIC,177,107,16,8
+    COMBOBOX        IDC_COMBO_CRUISE_POINT,130,47,83,80,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_CRUISE_PRESET,130,76,82,80,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_CRUISE_TIME,70,103,48,67,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    COMBOBOX        IDC_COMBO_CRUISE_SPEED,219,102,48,60,CBS_DROPDOWNLIST | WS_VSCROLL | WS_TABSTOP
+    PUSHBUTTON      "取消",IDCANCEL,231,138,50,14
+    PUSHBUTTON      "添加巡航点",IDC_BUTTON_ADD,22,139,50,14
+    PUSHBUTTON      "删除巡航点",IDC_BUTTON_DEL,91,139,50,14
+    PUSHBUTTON      "确定",IDC_BUTTON_OK,164,138,50,14
+END
+
+IDD_DLG_PICINFO DIALOGEX 0, 0, 633, 423
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "图片信息"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "发送",ID_BTN_SEND,522,404,50,14
+    PUSHBUTTON      "取消",IDCANCEL,576,404,50,14
+    EDITTEXT        IDC_EDT_SMS,7,356,619,46,ES_MULTILINE | ES_AUTOVSCROLL | WS_VSCROLL
+    CONTROL         "",IDC_COMBO_PIC,"Static",SS_BLACKFRAME,7,7,619,412
+    CONTROL         "",IDC_WARNING_PIC,"Static",SS_BLACKFRAME,7,7,619,343
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x4L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404B0"
+        BEGIN
+            VALUE "FileDescription", "HKDlg Microsoft 基础类应用程序"
+            VALUE "FileVersion", "1, 0, 0, 1"
+            VALUE "InternalName", "HKDlg"
+            VALUE "LegalCopyright", "版权所有 (C) 2013"
+            VALUE "OriginalFilename", "HKDlg.EXE"
+            VALUE "ProductName", "HKDlg 应用程序"
+            VALUE "ProductVersion", "1, 0, 0, 1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 228
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 48
+    END
+
+    IDD_HKDLG_DIALOG, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 632
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 405
+    END
+
+    IDD_DLG_PTZ_CRUISE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 303
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 170
+    END
+
+    IDD_DLG_PICINFO, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 626
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 416
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog Info
+//
+
+IDD_HKDLG_DIALOG DLGINIT
+BEGIN
+    IDC_COMBO_PTZ_SPEED, 0x403, 5, 0
+0xacc4, 0xcfc8, "\000" 
+    IDC_COMBO_PTZ_SPEED, 0x403, 2, 0
+0x0031, 
+    IDC_COMBO_PTZ_SPEED, 0x403, 2, 0
+0x0032, 
+    IDC_COMBO_PTZ_SPEED, 0x403, 2, 0
+0x0033, 
+    IDC_COMBO_PTZ_SPEED, 0x403, 2, 0
+0x0034, 
+    IDC_COMBO_PTZ_SPEED, 0x403, 2, 0
+0x0035, 
+    IDC_COMBO_PTZ_SPEED, 0x403, 2, 0
+0x0036, 
+    IDC_COMBO_PTZ_SPEED, 0x403, 2, 0
+0x0037, 
+    0
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDS_ABOUTBOX            "关于 HKDlg(&A)..."
+END
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_SPLITTER_RESOURCES
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+#ifdef _WIN32
+LANGUAGE 4, 2
+#pragma code_page(936)
+#endif //_WIN32
+#include "res\HKDlg.rc2"  // non-Microsoft Visual C++ edited resources
+#include "l.chs\afxres.rc"          // Standard components
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
